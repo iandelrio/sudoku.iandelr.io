@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     arrowKeyNav();
     cellInput();
-    // testing to delete =====
-    // loadSudokuFromArray(examples.Hard3)
-    // testing end ===========
 });
 
 function arrowKeyNav() {
@@ -132,11 +129,6 @@ function sudokuHelper() {
     let diffFlag = false;
     [errorsArr, diffFlag] = diffSudokuArrays(allNumsArr, solutionArr);
 
-    // testing beginning (to remove) =========
-    // diffFlag = true;
-    // errorsArr = [...Array(81).keys()].fill(true);
-    // testing end ===========================
-
     if (!diffFlag) {
         displayFeedback("No errors found - you're on the right track!", true);
         return;
@@ -165,11 +157,6 @@ function sudokuSolution() {
         displayFeedback("Puzzle cannot be solved", false);
         return;
     }
-
-    // testing beginning (to remove) =========
-    // originalNumsArr = [...Array(81).keys()];
-    // originalNumsArr = false;
-    // testing end ===========================
 
     // overwrite puzzle with solution
     let cells = sudokuGrid.getElementsByTagName('input');
