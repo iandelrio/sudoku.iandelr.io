@@ -169,7 +169,8 @@ function sudokuSolution() {
 
 function loadDemo() {
     removeFeedback();
-    loadSudokuFromArray(examples.Med1)
+    loadSudokuFromArray(examples.Med1);
+    document.getElementById("inlineRadio2").checked = true;
 }
 
 /**
